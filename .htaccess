@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule !\.(js|ico|gif|png|css)$ index.php
+# ça permet de rediriger et de créer une route sur la page
