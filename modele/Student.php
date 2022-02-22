@@ -30,7 +30,7 @@ class Student
 
     public function update()
     {
-        $sql = 'update student set schoolyearid =:school_year_id, projectid =:project_id, firstname =:firstname, lastname =;lastname, email =:email, createdat =:created_at, updatedat =:updated_at';
+        $sql = 'update student set school_year_id =:school_year_id, project_id =:project_id, firstname =:firstname, lastname =:lastname, email =:email, created_at =:created_at, updated_at =:updated_at';
         $sql = $sql . ' where id = :id';
         $stmt = $this->pdo->prepare($sql);
         $stmt->bindParam(':school_year_id', $this->school_year_id);
@@ -75,13 +75,13 @@ class Student
         $this->firstname = $data['firstname'];
         $this->lastname = $data['lastname'];
         $this->email = $data['email'];
-        $this->created_at = $data['created_at'];
-        $this->updated_at = $data['updated_at'];
+        // $this->created_at = $data['created_at'];
+        // $this->updated_at = $data['updated_at'];
     }
 
     public function delete(int $id)
     {
-        $sql = 'delete from tag where id = :id';
+        $sql = 'delete from student where id = :id';
         $stmt = $this->pdo->prepare($sql); //préparer la requete sql,
         $stmt->bindParam(':id', $id); // gère les caractères spéciaux, sert à éviter des failles de sécurité
         $stmt->execute(); // exécuter la requête

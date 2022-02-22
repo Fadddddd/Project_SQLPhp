@@ -20,7 +20,9 @@ switch ($op) {
         }
     case 'maj':
         $project->select($id);
-        $project->name = filter_input(INPUT_POST, 'nom', FILTER_SANITIZE_STRING);
+        $project->name = filter_input(INPUT_POST, 'nom', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $project->description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $project->client_name = filter_input(INPUT_POST, 'client_name', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         //filter sanitize retire les balises html
         $project->update();
         header('location: index.php');

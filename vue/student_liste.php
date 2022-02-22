@@ -23,8 +23,9 @@
             <td><?= $student['email'] ?></td>
             <td><?= $student['created_at'] ?></td>
             <td><?= $student['updated_at'] ?></td>
-            <td><a href="index.php?table=tag&id=<?= $student['id'] ?>&op=update">🖊️</a> </td>
-            <td><a href="index.php?table=tag&id=<?= $student['id'] ?>&op=delete">❌</a> </td>
+            <td><a href="index.php?table=student&id=<?= $student['id'] ?>&op=update">🖊️</a> </td>
+            <td><a href="index.php?table=student&id=<?= $student['id'] ?>&op=delete">❌</a> </td>
+
         </tr>
     <?php } ?>
 </table>

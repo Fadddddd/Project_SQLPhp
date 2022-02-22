@@ -26,8 +26,8 @@
             <td><?= $project['start_date'] ?></td>
             <td><?= $project['checkpoint_date'] ?></td>
             <td><?= $project['delivery_date'] ?></td>
-            <td><a href="index.php?table=tag&id=<?= $project['id'] ?>&op=update">🖊️</a></td>
-            <td><a href="index.php?table=tag&id=<?= $project['id'] ?>&op=delete">
+            <td><a href="index.php?table=project&id=<?= $project['id'] ?>&op=update">🖊️</a></td>
+            <td><a href="index.php?table=project&id=<?= $project['id'] ?>&op=delete">
                     ❌</a></td>
         </tr>
     <?php } ?>

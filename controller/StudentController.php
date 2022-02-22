@@ -22,7 +22,13 @@ switch ($op) {
         }
     case 'maj':
         $student->select($id);
-        $student->name = filter_input(INPUT_POST, 'nom', FILTER_SANITIZE_STRING);
+        $student->school_year_id = filter_input(INPUT_POST, 'school_year_id', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $student->project_id = filter_input(INPUT_POST, 'project_id', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $student->firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $student->lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $student->email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $student->created_at = filter_input(INPUT_POST, 'created_at', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $student->updated_at = filter_input(INPUT_POST, 'updated_at', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         //filter sanitize retire les balises html
         $student->update();
         header('location: index.php');

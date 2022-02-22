@@ -1,4 +1,4 @@
-<form method="POST" action="index.php?table=tag&id=<?= $tag->id ?>&op=maj">
+<form method="POST" action="index.php?table=student&id=<?= $tag->id ?>&op=maj">
     <p>Entrez vos valeurs</p>
 
     <label>Name</label> <br />

@@ -16,7 +16,7 @@ $route = str_replace($basedir, '', $uri);
 echo $route . '<br>';
  */
 
-$table = $_GET['table'] ?? '';
+$table = ucfirst($_GET['table'] ?? '');
 $id = intval($_GET['id'] ?? -1);
 $op = $_GET['op'] ?? '';
 //op=opération
@@ -47,4 +47,3 @@ switch ($table) {
 
 
 require_once('vue/foot.php');
-

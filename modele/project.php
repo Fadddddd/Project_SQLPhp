@@ -5,7 +5,7 @@ require_once('connect_bdd.php');
 class Project
 {
     public int $id;
-    public string $name;
+    public ?string $name;
     public $description;
     public $client_name;
     public $start_date;

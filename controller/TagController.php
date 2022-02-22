@@ -20,7 +20,7 @@ switch ($op) {
         }
     case 'maj':
         $tag->select($id);
-        $tag->name = filter_input(INPUT_POST, 'nom', FILTER_SANITIZE_STRING);
+        $tag->name = filter_input(INPUT_POST, 'nom', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         //filter sanitize retire les balises html
         $tag->update();
         header('location: index.php');
