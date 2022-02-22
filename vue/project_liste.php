@@ -29,6 +29,7 @@
             <td><a href="index.php?table=project&id=<?= $project['id'] ?>&op=update">🖊️</a></td>
             <td><a href="index.php?table=project&id=<?= $project['id'] ?>&op=delete">
                     ❌</a></td>
+            <td><a href="index.php?table=project&op=insert">&#x2795;</a></td>
         </tr>
     <?php } ?>
 </table>

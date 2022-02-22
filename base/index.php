@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../vue/css/style.css" />
     <title>Mon Blog</title>
 </head>
 
@@ -13,7 +13,7 @@
             <a href="index.php">
                 <h1 id="titreBlog">Mon Blog</h1>
             </a>
-            <p>Je vous souhaite la bienvenue sur ce modeste blog.</p>
+            <p>Je vous souhaite la bienvenue sur mon blog.</p>
         </header>
         <div id="contenu">
             <?php
@@ -38,7 +38,7 @@
             <?php endforeach; ?>
         </div> <!-- #contenu -->
         <footer id="piedBlog">
-            Blog réalisé avec PHP, HTML5 et CSS.
+            Site effectué grâce à SQL, PHP, HTML, CSS.
         </footer>
     </div> <!-- #global -->
 </body>
